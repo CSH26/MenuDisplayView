@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tjoeun.menudisplayview.MainActivity">
+
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:background="@drawable/title_layout"
+        android:id="@+id/titleLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:background="@drawable/image_light"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="    이런 메뉴는 어떠신가요?"
+            android:id="@+id/textView" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleLayout">
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchView" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/listLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:layout_marginTop="90dp">
+
+            <ListView
+                android:id="@+id/listView1"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></ListView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@id/listLayout"
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:background="@drawable/selector_button_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff74"
+            android:text="장바구니"
+            android:id="@+id/market"
+            android:layout_marginEnd="47dp"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/complete" />
+
+        <Button
+            android:background="@drawable/selector_button_click"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="선택완료"
+            android:textColor="#ff221166"
+            android:id="@+id/complete"
+            android:layout_marginEnd="67dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>
